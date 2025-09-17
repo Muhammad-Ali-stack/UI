@@ -4,7 +4,6 @@ import LoginPage from './components/LoginPage';
 import SignUpPage from './components/SignUpPage';
 import ForgotPasswordPage from './components/ForgotPasswordPage';
 import Dashboard from './components/Dashboard';
-import UserManagement from './components/UserManagement';
 import User from './components/User';
 import UserGrps from './components/UserGrps';
 import MCPServer from './components/MCPServer';
@@ -25,25 +24,12 @@ function App() {
     if (authState.isAuthenticated && authState.currentPage === 'dashboard') {
       return <Dashboard authState={authState} setAuthState={setAuthState} />;
     }
-    
-    if (authState.isAuthenticated && authState.currentPage === 'user-management') {
-      return (
-        <UserManagement
-          authState={authState}
-          setAuthState={setAuthState}
-          onNavigateToUsers={() => setAuthState({ ...authState, currentPage: 'user' })}
-          onNavigateToUserGroups={() => setAuthState({ ...authState, currentPage: 'user-grps' })}
-          onBackToDashboard={() => setAuthState({ ...authState, currentPage: 'dashboard' })}
-        />
-      );
-    }
-    
+
     if (authState.isAuthenticated && authState.currentPage === 'user') {
       return (
         <User
           authState={authState}
           setAuthState={setAuthState}
-          onBackToUserManagement={() => setAuthState({ ...authState, currentPage: 'user-management' })}
         />
       );
     }
@@ -53,7 +39,6 @@ function App() {
         <UserGrps
           authState={authState}
           setAuthState={setAuthState}
-          onBackToUserManagement={() => setAuthState({ ...authState, currentPage: 'user-management' })}
         />
       );
     }

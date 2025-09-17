@@ -33,7 +33,7 @@ const Sidebar: React.FC<SidebarProps> = ({ authState, setAuthState }) => {
       icon: Users,
       children: [
         { id: "users-list", label: "Users" },
-        { id: "user-management", label: "User Management" },
+        { id: "user-grps", label: "User Groups" },
       ],
     },
     {
@@ -77,8 +77,8 @@ const Sidebar: React.FC<SidebarProps> = ({ authState, setAuthState }) => {
         case 'users-list':
           setAuthState({ ...authState, currentPage: 'user' });
           break;
-        case 'user-management':
-          setAuthState({ ...authState, currentPage: 'user-management' });
+        case 'user-grps':
+          setAuthState({ ...authState, currentPage: 'user-grps' });
           break;
       }
     }

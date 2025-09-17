@@ -10,13 +10,6 @@ interface DashboardProps {
 }
 
 const Dashboard: React.FC<DashboardProps> = ({ authState, setAuthState }) => {
-  const handleNavigateToUserManagement = () => {
-    setAuthState({
-      ...authState,
-      currentPage: 'user-management'
-    });
-  };
-  
   const handleNavigateToUsers = () => {
     setAuthState({
       ...authState,
@@ -38,7 +31,6 @@ const Dashboard: React.FC<DashboardProps> = ({ authState, setAuthState }) => {
         <Sidebar authState={authState} setAuthState={setAuthState} />
         <DashboardContent 
           authState={authState} 
-          onNavigateToUserManagement={handleNavigateToUserManagement}
           onNavigateToUsers={handleNavigateToUsers}
           onNavigateToUserGroups={handleNavigateToUserGroups}
         />

@@ -10,14 +10,12 @@ import {
 
 interface DashboardContentProps {
   authState: AuthState;
-  onNavigateToUserManagement: () => void;
   onNavigateToUsers: () => void;
   onNavigateToUserGroups: () => void;
 }
 
 const DashboardContent: React.FC<DashboardContentProps> = ({
   authState,
-  onNavigateToUserManagement,
   onNavigateToUsers,
   onNavigateToUserGroups,
 }) => {
@@ -79,10 +77,7 @@ const DashboardContent: React.FC<DashboardContentProps> = ({
               <div
                 className="flex items-center mb-2 space-x-2 cursor-pointer"
                 onClick={() => {
-                  // only User Management card should navigate on header click
-                  if (card.title === "User Management") {
-                    onNavigateToUserManagement();
-                  }
+                  // No header click navigation needed anymore
                 }}
               >
                 <Icon className="w-6 h-6 text-blue-600" />

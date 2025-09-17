@@ -8,7 +8,7 @@ export interface User {
 export interface AuthState {
   isAuthenticated: boolean;
   currentUser: User | null;
-  currentPage: 'login' | 'signup' | 'forgot-password' | 'dashboard' | 'user-management' | 'user' | 'user-grps' | 'mcp-server' | 'add-mcp-server' | 'cj-env-list' | 'add-cj-env';
+  currentPage: 'login' | 'signup' | 'forgot-password' | 'dashboard' | 'user' | 'user-grps' | 'mcp-server' | 'add-mcp-server' | 'cj-env-list' | 'add-cj-env';
   forgotPasswordStep: 1 | 2;
   tempUser: User | null;
 }
