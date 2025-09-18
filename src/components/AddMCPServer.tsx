@@ -1,13 +1,21 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 import { AuthState } from "../types/auth";
+=======
+import React from 'react';
+import Navbar from './Navbar';
+import Sidebar from './Sidebar';
+import { AuthState } from '../types/auth';
+>>>>>>> ac0c144a78e8cebb55ecf28c6ffba800f806ef20
 
 interface AddMCPServerProps {
   authState: AuthState;
   setAuthState: React.Dispatch<React.SetStateAction<AuthState>>;
 }
 
+<<<<<<< HEAD
 const CheckIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="none" aria-hidden>
     <path
@@ -197,10 +205,25 @@ const AddMCPServer: React.FC<AddMCPServerProps> = ({
               </div>
             </div>
           )}
+=======
+const AddMCPServer: React.FC<AddMCPServerProps> = ({ authState, setAuthState }) => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navbar authState={authState} setAuthState={setAuthState} />
+      <div className="flex">
+        <Sidebar authState={authState} setAuthState={setAuthState} />
+        <div className="flex-1 ml-64 pt-16 p-6">
+          <h1 className="text-2xl font-bold text-gray-900">Add MCP Server</h1>
+          <p className="text-gray-600 mt-2">Hello World - Add MCP Server Component</p>
+>>>>>>> ac0c144a78e8cebb55ecf28c6ffba800f806ef20
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default AddMCPServer;
+=======
+export default AddMCPServer;
+>>>>>>> ac0c144a78e8cebb55ecf28c6ffba800f806ef20

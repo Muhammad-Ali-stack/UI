@@ -1,14 +1,22 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import { AuthState } from '../types/auth';
 import { Copy, Edit, Trash2 } from 'lucide-react';
+=======
+import React from 'react';
+import Navbar from './Navbar';
+import Sidebar from './Sidebar';
+import { AuthState } from '../types/auth';
+>>>>>>> ac0c144a78e8cebb55ecf28c6ffba800f806ef20
 
 interface MCPServerProps {
   authState: AuthState;
   setAuthState: React.Dispatch<React.SetStateAction<AuthState>>;
 }
 
+<<<<<<< HEAD
 interface Server {
   id: number;
   name: string;
@@ -53,6 +61,9 @@ const MCPServer: React.FC<MCPServerProps> = ({ authState, setAuthState }) => {
     setActiveModal(null);
   };
 
+=======
+const MCPServer: React.FC<MCPServerProps> = ({ authState, setAuthState }) => {
+>>>>>>> ac0c144a78e8cebb55ecf28c6ffba800f806ef20
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar authState={authState} setAuthState={setAuthState} />
@@ -60,6 +71,7 @@ const MCPServer: React.FC<MCPServerProps> = ({ authState, setAuthState }) => {
         <Sidebar authState={authState} setAuthState={setAuthState} />
         <div className="flex-1 ml-64 pt-16 p-6">
           <h1 className="text-2xl font-bold text-gray-900">MCP Server Management</h1>
+<<<<<<< HEAD
           <p className="text-gray-600 mt-2 mb-6">Manage your MCP servers below.</p>
 
           <div className="bg-white shadow rounded-2xl overflow-hidden">
@@ -186,10 +198,17 @@ const MCPServer: React.FC<MCPServerProps> = ({ authState, setAuthState }) => {
               </div>
             </div>
           )}
+=======
+          <p className="text-gray-600 mt-2">Hello World - MCP Server Component</p>
+>>>>>>> ac0c144a78e8cebb55ecf28c6ffba800f806ef20
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default MCPServer;
+=======
+export default MCPServer;
+>>>>>>> ac0c144a78e8cebb55ecf28c6ffba800f806ef20
